@@ -1,5 +1,5 @@
 {
-  "app": "gradlew run -DmainClass=com.myorg.InfrastructureApp",
+  "app": "./gradlew run -DmainClass=com.myorg.InfrastructureApp",
   "watch": {
     "include": [
       "**"
