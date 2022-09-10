@@ -14,10 +14,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-      - name: Build infrastructure step
-        working-directory: ./app
+      - name: Build project
+        working-directory: ./infrastructure
         run:
           mvn --batch-mode --update-snapshots verify
+      - name: Build infrastructure step
         uses: ./ # Uses an action in the root directory
         with:
           cdk_subcommand: 'diff'
