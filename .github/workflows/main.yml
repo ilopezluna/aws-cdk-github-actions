@@ -9,10 +9,6 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Build project
-        working-directory: ./infrastructure
-        run:
-          mvn --batch-mode --update-snapshots verify
       - name: Build infrastructure step
         uses: ./ # Uses an action in the root directory
         with:
