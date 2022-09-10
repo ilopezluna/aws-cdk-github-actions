@@ -15,6 +15,9 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build infrastructure step
+        working-directory: ./app
+        run:
+          mvn --batch-mode --update-snapshots verify
         uses: ./ # Uses an action in the root directory
         with:
           cdk_subcommand: 'diff'
